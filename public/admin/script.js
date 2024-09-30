@@ -26,6 +26,7 @@ $(document).ready(function() {
         const formData = new FormData();
         formData.append('displayName', $('#displayName').val());
         formData.append('fullName', $('#fullName').val());
+        formData.append('username', $('#fullName').val().toLowerCase().replace(/\s+/g, '_'));
         formData.append('rollno', $('#rollno').val());
         formData.append('section', $('#section').val());
         formData.append('year', $('#year').val());

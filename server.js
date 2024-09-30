@@ -65,6 +65,7 @@ app.post('/members', upload.fields([{ name: 'portrait1' }, { name: 'portrait2' }
     const newMember = {
         displayName: req.body.displayName,
         fullName: req.body.fullName,
+        username: req.body.username,
         rollno: req.body.rollno,
         section: req.body.section,
         year: req.body.year,
