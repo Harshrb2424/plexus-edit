@@ -65,7 +65,10 @@ function renderMembers() {
             <option value="Design Club Co-ordinator" ${member.role === "Design Club Co-ordinator" ? "selected" : ""}>Design Club Co-ordinator</option>
             <option value="Design Club Member" ${member.role === "Design Club Member" ? "selected" : ""}>Design Club Member</option>
         </select>
-    
+
+        <input type="text" value="${member.introduction}" placeholder="Introduction" class="member-input" data-field="introduction" data-index="${index}">
+        <input type="text" value="${member.experience}" placeholder="Experience" class="member-input" data-field="experience" data-index="${index}">
+
         <input type="text" value="${member.email}" placeholder="Email" class="member-input" data-field="email" data-index="${index}">
         <input type="text" value="${member.insta}" placeholder="Instagram ID" class="member-input" data-field="insta" data-index="${index}">
         <input type="text" value="${member.github}" placeholder="Github Link" class="member-input" data-field="github" data-index="${index}">
@@ -76,7 +79,7 @@ function renderMembers() {
         <!-- Image Upload -->
         <div class="image-upload">
             <input type="file" data-index="${index}" class="upload-input">
-            <img src="${member.portrait1 ? member.portrait1 : 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg'}" alt="Portrait" class="portrait">
+            <img src="${member.portrait ? member.portrait : 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg'}" alt="Portrait" class="portrait">
         </div>
     
         <button class="delete-member" data-index="${index}">Delete</button>
@@ -117,7 +120,7 @@ function handleFileUpload(event) {
     .then(response => response.json())
     .then(data => {
         // Update member's portrait1 field with the new file path
-        members[index].portrait1 = data.filePath;
+        members[index].portrait = data.filePath;
         renderMembers();
     })
     .catch(error => {
@@ -140,13 +143,15 @@ function addMember() {
         section: '',
         year: '',
         role: '',
+        introduction: '',
+        experience: '',
         email: '',
         insta: '',
         github: '',
         linkedin: '',
         twitter: '',
         youtube: '',
-        portrait1: ''
+        portrait: ''
     });
     renderMembers();
 }

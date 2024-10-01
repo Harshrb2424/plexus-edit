@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add some styles for the user details */
+        #user-details {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 150px; /* Limit the image size */
+            border-radius: 5px; /* Optional styling for the image */
+        }
+        a {
+            color: #007bff; /* Bootstrap-like link color */
+            text-decoration: none; /* Remove underline */
+        }
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div id="user-details">
+    <h2>User Details</h2>
+    <div id="details"></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        // Get the username from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        // Fetch the members.json file
+        $.getJSON('/data/members.json', function(data) {
+            // Find the user with the matching username
+            const user = data.find(member => member.username === username);
+            if (user) {
+                console.log(user);
+                // Update the details section with user information
+                $('#details').html(`
+                    <p><strong>Display Name:</strong> ${user.displayName}</p>
+                    <p><strong>Full Name:</strong> ${user.fullName}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${user.email}">${user.email}</a></p>
+                    <p>${user.introduction}<p/>
+                    <p>${user.experience}<p/>
+                    <p><strong>GitHub:</strong> <a href="${user.github}" target="_blank">${user.github || 'Not provided'}</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/${user.insta || 'Not provided'}" target="_blank">${user.insta}</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="${user.linkedin}" target="_blank">${user.linkedin || 'Not provided'}</a></p>
+                    <p><strong>Role:</strong> ${user.role}</p>
+                    <p><strong>Roll Number:</strong> ${user.rollno}</p>
+                    <p><strong>Section:</strong> ${user.section}</p>
+                    <p><strong>Year:</strong> ${user.year}</p>
+                    <p><strong>Twitter:</strong> <a href="${user.twitter}" target="_blank">${user.twitter || 'Not provided'}</a></p>
+                    <p><strong>YouTube:</strong> <a href="${user.youtube}" target="_blank">${user.youtube || 'Not provided'}</a></p>
+                    <img src="/public${user.portrait}" alt="${user.fullName}">
+                `);
+            } else {
+                $('#details').html('<p>User not found.</p>');
+            }
+        }).fail(function() {
+            $('#details').html('<p>Error loading user data.</p>');
+        });
+    });
+</script>
+
+</body>
+</html>
