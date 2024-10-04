@@ -1,0 +1,26 @@
+[
+    {
+        "name": "SRI. CH. MALLA REDDY",
+        "role": "Founder Chairman",
+        "desc": "As Founder Chairman, I am proud to present Plexus, a platform created to inspire innovation, creativity, and collaboration among our students. Plexus goes beyond being a space; it is a mindset that encourages students to challenge norms and explore new frontiers. Through technical, non-technical, and hackathon events, Plexus will empower students to showcaadse their skills, learn from experts, and grow both personally and professionally.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_qMhfDuYUKyxAAqZjlSAMRumNnkx9oTlxVA&s"
+    },
+    {
+        "name": "SRI. CH. MAHENDER REDDY",
+        "role": "Secretary",
+        "desc": "As Secretary, I am pleased to introduce Plexus Hub, a dedicated platform for nurturing talent and driving innovation. Plexus offers a variety of events—ranging from technical competitions to non-technical workshops—that are designed to challenge students and enhance their skills. I encourage everyone to participate and use this platform not only for competition but for learning and personal growth.",
+        "img": ""
+    },
+    {
+        "name": "DR. CH. BHADRA REDDY",
+        "role": "President",
+        "desc": "As President, I am honored to launch Plexus Hub, a forward-thinking initiative aimed at cultivating innovation and excellence. Plexus is not just an event space but a driver of collaboration and creativity. Through technical and creative events, Plexus provides students the opportunity to push boundaries and develop solutions that reflect their full potential. I urge all students to engage fully with this initiative and take advantage of the opportunities it offers.",
+        "img": ""
+    },
+    {
+        "name": "HOD Name",
+        "role": "HOD",
+        "desc": "HOD Desc",
+        "img": ""
+    }
+]

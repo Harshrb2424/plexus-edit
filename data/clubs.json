@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Technical Club",
+        "desc": "The Technical Club focuses on harnessing innovation and technical expertise. Members of this club will engage in the organization of technical events, brainstorming innovative solutions, and working on cutting-edge projects. The club ensures that all technical aspects of Plexus, including innovative ideas and maintaining technological infrastructure, are executed efficiently. From coding challenges to hardware integration, this club drives the technical backbone of the event.",
+        "svg": "code"
+    },
+    {
+        "name": "NON-Technical Club",
+        "desc": "The Non-Technical Club takes charge of event decor and ensuring that the atmosphere of Plexus is visually captivating. Members are responsible for handling decorations, setting up stages, and ensuring smooth transitions between various events. This club plays a crucial role in enhancing the aesthetic experience, creating a welcoming and exciting ambiance for all participants.",
+        "svg": "pizzle"
+    },
+    {
+        "name": "Sports Club",
+        "desc": "The Sports Club is responsible for managing all physical sports-related activities and competitions within Plexus. From organizing team sports to individual challenges, this club ensures that every event is well-coordinated and enjoyable. Their aim is to promote physical fitness, teamwork, and friendly competition among participants, while managing smooth execution of all sports events.",
+        "svg": "field"
+    },
+    {
+        "name": "E-Sports Club",
+        "desc": "With the rise of competitive gaming, the E-Sports Club manages all gaming-related events at Plexus. This includes organizing gaming tournaments, managing live-streams, and coordinating between participants. The club ensures a seamless gaming experience by providing technical support and maintaining a vibrant, competitive atmosphere.",
+        "svg": "controller"
+    },
+    {
+        "name": "Social Media Club",
+        "desc": "The Social Media Club takes the lead in maintaining a strong digital presence for Plexus. Members are responsible for creating engaging content, including photos, videos, and social media posts. They also handle content writing, event coverage, and report writing. By curating the online experience and showcasing key highlights, the club ensures that Plexus reaches a wide audience, both online and offline.",
+        "svg": "whatsapp"
+    },
+    {
+        "name": "Design Club",
+        "desc": "The Design Club is tasked with managing the visual branding of Plexus. Members design invitations, posters, banners, and brochures that capture the spirit of the event. They are also responsible for digital content creation, from crafting stunning Google Forms to producing visually engaging magazines. Additionally, the club ensures that all media displayed, including projectors and presentations, are up to the highest standards.",
+        "svg": "pencil"
+    }
+]
